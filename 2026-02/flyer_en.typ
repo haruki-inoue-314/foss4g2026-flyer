@@ -144,16 +144,16 @@
 // Logo (absolute placement, bottom-right)
 #place(
   bottom + right,
-  dx: -24pt,
-  dy: -16pt,
-  image(logo_path, height: 30mm),
+  dx: -28pt,
+  dy: -28pt,
+  image(logo_path, height: 28mm),
 )
 
 // QR code (absolute placement, bottom-left)
 #place(
   bottom + left,
-  dx: 14pt,
-  dy: -10pt,
+  dx: 20pt,
+  dy: -20pt,
   grid(
     columns: (auto, auto),
     column-gutter: 8pt,

@@ -147,16 +147,16 @@
 // ロゴ（右下に絶対配置）
 #place(
   bottom + right,
-  dx: -24pt,
-  dy: -16pt,
-  image(logo_path, height: 30mm),
+  dx: -28pt,
+  dy: -28pt,
+  image(logo_path, height: 28mm),
 )
 
 // QRコード（左下に絶対配置）
 #place(
   bottom + left,
-  dx: 14pt,
-  dy: -10pt,
+  dx: 20pt,
+  dy: -20pt,
   grid(
     columns: (auto, auto),
     column-gutter: 8pt,
