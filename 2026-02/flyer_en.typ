@@ -39,8 +39,16 @@
   dy: 25mm,
   block(width: 100%)[
     #align(center)[
-      #text(fill: white, size: 40pt, weight: "bold",
-        tracking: 0.5pt)[FOSS4G Hiroshima 2026]
+      #box[
+        // Shadow (black text)
+        #place(dx: 2pt, dy: 2pt)[
+          #text(fill: rgb(0, 0, 0, 30%), size: 40pt, weight: "bold",
+            tracking: 0.5pt)[FOSS4G Hiroshima 2026]
+        ]
+        // Main text (white)
+        #text(fill: white, size: 40pt, weight: "bold",
+          tracking: 0.5pt)[FOSS4G Hiroshima 2026]
+      ]
       #v(4pt)
     ]
   ],
@@ -86,7 +94,7 @@
 
     // ── Right column: Registration ──
     block(height: column_height)[
-      #text(size: 12pt, weight: "bold")[Registration (Excluding Tax)]
+      #text(size: 12pt, weight: "bold")[Registration ]#text(size: 9pt, weight: "bold")[(Excluding Tax)]
       #set text(size: 10pt)
       #grid(
         columns: (1fr, auto),
@@ -119,12 +127,14 @@
   #v(10pt)
 
   // Footer: organizer, website, contact
-  #set text(size: 10pt)
-  #text(weight: "bold", size: 11pt)[#content.footer.organizer]
-  #v(0pt)
-  #text(size: 10.5pt)[#link(content.url)[#content.url]]
-  #h(18pt)
-  #text(size: 10.5pt)[Contact: #link("mailto:" + content.footer.contact)[#content.footer.contact]]
+  #align(center)[
+    #set text(size: 10pt)
+    #text(weight: "bold", size: 11pt)[#content.footer.organizer]
+    #v(0pt)
+    #text(size: 10.5pt)[#link(content.url)[#content.url]]
+    #h(18pt)
+    #text(size: 10.5pt)[Contact: #link("mailto:" + content.footer.contact)[#content.footer.contact]]
+  ]
 ]
 
 // Logo (absolute placement, bottom-right)
@@ -140,5 +150,11 @@
   bottom + left,
   dx: 14pt,
   dy: -10pt,
-  image("../assets/foss4g-2026-en.svg", height: 35mm),
+  grid(
+    columns: (auto, auto),
+    column-gutter: 8pt,
+    align: (center, horizon),
+    image("../assets/foss4g-2026-en.svg", height: 35mm),
+    text(size: 9pt)[#content.footer.qr_caption]
+  )
 )

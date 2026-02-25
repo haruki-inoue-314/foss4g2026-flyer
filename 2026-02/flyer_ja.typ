@@ -42,8 +42,16 @@
   dy: 25mm,
   block(width: 100%)[
     #align(center)[
-      #text(fill: white, size: 40pt, weight: "bold",
-        tracking: 0.5pt, font: "Helvetica Neue")[FOSS4G Hiroshima 2026]
+      #box[
+        // 影（黒いテキスト）
+        #place(dx: 2pt, dy: 2pt)[
+          #text(fill: rgb(0, 0, 0, 30%), size: 40pt, weight: "bold",
+            tracking: 0.5pt, font: "Helvetica Neue")[FOSS4G Hiroshima 2026]
+        ]
+        // メインテキスト（白）
+        #text(fill: white, size: 40pt, weight: "bold",
+          tracking: 0.5pt, font: "Helvetica Neue")[FOSS4G Hiroshima 2026]
+      ]
       #v(4pt)
     ]
   ],
@@ -89,7 +97,7 @@
 
     // ── 右列：参加費 ──
     block(height: column_height)[
-      #text(size: 12pt, weight: "bold")[参加費(税抜)]
+      #text(size: 12pt, weight: "bold")[参加費]#text(size: 9pt, weight: "bold")[(税抜)]
       #set text(size: 10pt)
       #v(-4pt)
       #grid(
@@ -123,12 +131,14 @@
   #v(10pt)
 
   // フッター：主催・URL・連絡先
-  #set text(size: 10pt)
-  #text(weight: "bold", size: 11pt)[#content.footer.organizer]
-  #v(0pt)
-  #text(size: 10.5pt)[#link(content.url)[#content.url]]
-  #h(16pt)
-  #text(size: 10.5pt)[問い合わせ：#link("mailto:" + content.footer.contact)[#content.footer.contact]]
+  #align(center)[
+    #set text(size: 10pt)
+    #text(weight: "bold", size: 11pt)[#content.footer.organizer]
+    #v(0pt)
+    #text(size: 10.5pt)[#link(content.url)[#content.url]]
+    #h(16pt)
+    #text(size: 10.5pt)[問い合わせ：#link("mailto:" + content.footer.contact)[#content.footer.contact]]
+  ]
 ]
 
 // ロゴ（右下に絶対配置）
@@ -144,5 +154,11 @@
   bottom + left,
   dx: 14pt,
   dy: -10pt,
-  image("../assets/foss4g-2026-ja.svg", height: 35mm),
+  grid(
+    columns: (auto, auto),
+    column-gutter: 8pt,
+    align: (center, horizon),
+    image("../assets/foss4g-2026-ja.svg", height: 35mm),
+    text(size: 9pt)[#content.footer.qr_caption]
+  )
 )
