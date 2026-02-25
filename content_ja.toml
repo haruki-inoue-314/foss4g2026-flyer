@@ -23,29 +23,13 @@ date_end = "5日(土)"
 venue = "未定"
 
 [[registration.tickets]]
-name = "Super Early Bird"
-price = "¥40,000"
-note = "100枚限定"
-deadline = "3月7日まで"
-
-[[registration.tickets]]
-name = "Early Bird"
-price = "¥50,000"
-deadline = "4月21日まで"
-
-[[registration.tickets]]
-name = "Regular"
-price = "¥80,000"
-deadline = "当日まで"
-
-[[registration.tickets]]
 name = "学生"
 price = "¥30,000"
 
 [[registration.tickets]]
-name = "国内"
+name = "ローカル"
 price = "¥40,000"
-note = "学生以外の国内在住者向け"
+note = "学生以外の日本国内在住者向け"
 
 [[registration.tickets]]
 name = "ワークショップ"

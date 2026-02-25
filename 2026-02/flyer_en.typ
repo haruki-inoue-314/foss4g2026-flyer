@@ -66,7 +66,7 @@
   inset: (x: 24pt, top: 18pt, bottom: 42pt),
 )[
   // Two-column layout: Schedule | Registration
-  #let column_height = 96pt
+  #let column_height = 110pt
   #grid(
     columns: (1fr, 1fr),
     column-gutter: 20pt,
@@ -119,21 +119,21 @@
           )
         }).flatten()
       )
+      #text(size: 8pt, fill: luma(50%))[Japanese VAT 10% will be added at checkout]
     ],
   )
 
-  #v(14pt)
+  #v(16pt)
   #line(length: 100%, stroke: 0.8pt + luma(180))
-  #v(10pt)
+  #v(4pt)
 
   // Footer: organizer, website, contact
   #align(center)[
     #set text(size: 10pt)
-    #text(weight: "bold", size: 11pt)[#content.footer.organizer]
-    #v(0pt)
-    #text(size: 10.5pt)[#link(content.url)[#content.url]]
-    #h(18pt)
-    #text(size: 10.5pt)[Contact: #link("mailto:" + content.footer.contact)[#content.footer.contact]]
+    #text(weight: "bold", size: 10pt)[#content.footer.organizer]
+    #v(-2pt)
+    #text(size: 8pt)[#link(content.url)[#content.url]]
+    #text(size: 8pt)[Contact: #link("mailto:" + content.footer.contact)[#content.footer.contact]]
   ]
 ]
 

@@ -99,11 +99,10 @@
     block(height: column_height)[
       #text(size: 12pt, weight: "bold")[参加費]#text(size: 9pt, weight: "bold")[(税抜)]
       #set text(size: 10pt)
-      #v(-4pt)
       #grid(
         columns: (1fr, auto),
         column-gutter: 8pt,
-        row-gutter: 8pt,
+        row-gutter: 16pt,
         align: (left, right),
 
         ..content.registration.tickets.map(ticket => {
