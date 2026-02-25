@@ -1,0 +1,54 @@
+url = "https://2026.foss4g.org/"
+
+[[workshop]]
+name = "Workshop"
+date_start = "August 30"
+date_end = "August 31"
+venue = "RCC Bunka Center"
+
+[[conference]]
+name = "Conference"
+date_start = "September 1"
+date_end = "September 3"
+venue = "International Conference Center Hiroshima"
+
+[[communitysprint]]
+name = "Code Sprint"
+date_start = "September 4"
+date_end = "September 5"
+venue = "Planned in Hiroshima"
+
+[[registration.tickets]]
+name = "Super Early Bird"
+price = "¥40,000"
+note = "Limited to 100"
+deadline = "Until March 7"
+
+[[registration.tickets]]
+name = "Early Bird"
+price = "¥50,000"
+deadline = "Until April 21"
+
+[[registration.tickets]]
+name = "Regular"
+price = "¥80,000"
+deadline = "Until day of event"
+
+[[registration.tickets]]
+name = "Student"
+price = "¥30,000"
+
+[[registration.tickets]]
+name = "Local"
+price = "¥40,000"
+note = "For residents in Japan"
+
+[[registration.tickets]]
+name = "Workshop"
+note = "per session"
+price = "¥7,500"
+
+[footer]
+organizer = "Organized by: FOSS4G Hiroshima 2026 LOC / OSGeo.JP / OSGeo Foundation"
+contact = "info@foss4g.org"
+qr_caption = "Visit our website"
